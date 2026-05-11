@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Portfolio - Designing the Future</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="particles"></div>
+        <div class="grid-pattern"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="assets/icons/FLEX%20TECH%20OFFICIAL%20LOGO.png" alt="Flextechnologies Logo" class="logo-icon" style="height: 65px; width: auto;">
+            </div>
+            <div class="nav-menu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#portfolio" class="nav-link">Portfolio</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#testimonials" class="nav-link">Testimonials</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <button class="mobile-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title" data-aos="fade-up">
+                Designing the Future of Digital Experiences
+            </h1>
+            <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="100">
+                Crafting stunning visuals and seamless interfaces that elevate your brand
+            </p>
+            <div class="hero-buttons" data-aos="fade-up" data-aos-delay="200">
+                <button class="btn btn-primary" data-action="scroll-portfolio">
+                    <span>View Work</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+                <button class="btn btn-secondary" data-action="scroll-services">
+                    <span>Book a Service</span>
+                </button>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="floating-cards">
+                <div class="card card-1">UI</div>
+                <div class="card card-2">UX</div>
+                <div class="card card-3">Web</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="section-header">
+            <h2 class="section-title">Featured Work</h2>
+            <p class="section-subtitle">Explore my latest projects and creations</p>
+        </div>
+
+        <div class="portfolio-filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="web">Web Design</button>
+            <button class="filter-btn" data-filter="branding">Branding</button>
+            <button class="filter-btn" data-filter="ui">UI/UX</button>
+        </div>
+
+        <div class="portfolio-grid">
+            <!-- Portfolio Items -->
+            <div class="portfolio-item" data-category="branding">
+                <div class="portfolio-image">
+                    <img src="assets/images/GIMWIN LOGO.png" alt="GIMWIN Logo" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="portfolio-overlay">
+                        <h3>GIMWIN Branding</h3>
+                        <p>Professional logo design and brand identity</p>
+                        <a href="#" class="view-link">View Project →</a>
+                    </div>
+                </div>
+                <div class="portfolio-info">
+                    <h3>GIMWIN Brand Identity</h3>
+                    <p>Branding / Logo Design</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item" data-category="branding">
+                <div class="portfolio-image">
+                    <img src="assets/images/GIMWIN POSTER.png" alt="GIMWIN Poster" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="portfolio-overlay">
+                        <h3>GIMWIN Marketing</h3>
+                        <p>Creative poster and promotional design</p>
+                        <a href="#" class="view-link">View Project →</a>
+                    </div>
+                </div>
+                <div class="portfolio-info">
+                    <h3>GIMWIN Marketing Materials</h3>
+                    <p>Graphic Design / Marketing</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item" data-category="branding">
+                <div class="portfolio-image">
+                    <img src="assets/images/TTRC OFFICIAL LOGO.png" alt="TTRC Logo" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="portfolio-overlay">
+                        <h3>TTRC Corporate Logo</h3>
+                        <p>Official corporate identity and branding</p>
+                        <a href="#" class="view-link">View Project →</a>
+                    </div>
+                </div>
+                <div class="portfolio-info">
+                    <h3>TTRC Official Logo</h3>
+                    <p>Corporate Branding / Logo Design</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item" data-category="web">
+                <div class="portfolio-image">
+                    <img src="assets/images/Flextech.png" alt="Flextech Project" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="portfolio-overlay">
+                        <h3>Flextech Design</h3>
+                        <p>Modern tech company branding and design</p>
+                        <a href="#" class="view-link">View Project →</a>
+                    </div>
+                </div>
+                <div class="portfolio-info">
+                    <h3>Flextech Brand Design</h3>
+                    <p>Branding / Web Design</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item" data-category="branding">
+                <div class="portfolio-image">
+                    <img src="assets/JOMO DELTA INTERIORS BUSINESS CARD-01.png" alt="Jomo Delta Business Card" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="portfolio-overlay">
+                        <h3>Jomo Delta Interiors</h3>
+                        <p>Business card and branding design</p>
+                        <a href="#" class="view-link">View Project →</a>
+                    </div>
+                </div>
+                <div class="portfolio-info">
+                    <h3>Jomo Delta Interiors</h3>
+                    <p>Branding / Print Design</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item" data-category="branding">
+                <div class="portfolio-image">
+                    <img src="assets/JOMO DIFFERENT COLOR PELETTES.png" alt="Color Palettes" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="portfolio-overlay">
+                        <h3>Color Strategy</h3>
+                        <p>Brand color palette and design systems</p>
+                        <a href="#" class="view-link">View Project →</a>
+                    </div>
+                </div>
+                <div class="portfolio-info">
+                    <h3>Color Palette Design</h3>
+                    <p>Design System / Branding</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services & Booking Section -->
+    <section id="services" class="services">
+        <div class="section-header">
+            <h2 class="section-title">Services</h2>
+            <p class="section-subtitle">What I can create for you</p>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-palette"></i>
+                </div>
+                <h3>Brand Design</h3>
+                <p>Complete visual identity, logo design, and brand guidelines</p>
+                <span class="price">$1,500+</span>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-globe"></i>
+                </div>
+                <h3>Web Design</h3>
+                <p>Modern, responsive websites with exceptional user experience</p>
+                <span class="price">$2,000+</span>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <h3>UI/UX Design</h3>
+                <p>Intuitive interfaces and seamless user interactions</p>
+                <span class="price">$1,800+</span>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-pencil-ruler"></i>
+                </div>
+                <h3>Design Consultation</h3>
+                <p>Strategic design guidance and creative direction sessions</p>
+                <span class="price">$500/hr</span>
+            </div>
+        </div>
+
+        <!-- Booking Interface -->
+        <div class="booking-container">
+            <h3 class="booking-title">Schedule a Consultation</h3>
+            <div class="booking-form-wrapper">
+                <form class="booking-form" id="bookingForm">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <select required>
+                            <option value="">Select Service</option>
+                            <option value="branding">Brand Design</option>
+                            <option value="web">Web Design</option>
+                            <option value="ui">UI/UX Design</option>
+                            <option value="consultation">Consultation</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <input type="date" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Book Now</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Email Collection Section -->
+    <section class="newsletter">
+        <div class="newsletter-content">
+            <h2>Get Design Insights & Updates</h2>
+            <p>Subscribe to receive exclusive design tips, industry trends, and special offers</p>
+            <form class="newsletter-form" id="newsletterForm">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit" class="btn btn-primary">
+                    <span>Subscribe</span>
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="section-header">
+            <h2 class="section-title">About Me</h2>
+        </div>
+
+        <div class="about-content">
+            <div class="about-text">
+                <h3>Passionate Designer & Creative Technologist</h3>
+                <p>
+                    With over 5 years of experience in design and digital creation, I specialize in crafting beautiful, functional digital experiences. My approach combines strategic thinking with cutting-edge design practices to deliver solutions that not only look stunning but drive real business results.
+                </p>
+                <div class="skills">
+                    <div class="skill-tag">UI/UX Design</div>
+                    <div class="skill-tag">Web Design</div>
+                    <div class="skill-tag">Branding</div>
+                    <div class="skill-tag">Figma</div>
+                    <div class="skill-tag">Adobe Creative Suite</div>
+                    <div class="skill-tag">Interaction Design</div>
+                    <div class="skill-tag">Design Systems</div>
+                    <div class="skill-tag">User Research</div>
+                </div>
+            </div>
+
+            <div class="about-stats">
+                <div class="stat">
+                    <h4>150+</h4>
+                    <p>Projects Completed</p>
+                </div>
+                <div class="stat">
+                    <h4>8+</h4>
+                    <p>Years Experience</p>
+                </div>
+                <div class="stat">
+                    <h4>50+</h4>
+                    <p>Happy Clients</p>
+                </div>
+                <div class="stat">
+                    <h4>20+</h4>
+                    <p>Awards Won</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="section-header">
+            <h2 class="section-title">What Clients Say</h2>
+        </div>
+
+        <div class="testimonials-carousel">
+            <div class="testimonial-card">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">
+                    "The designer created an exceptional brand identity that perfectly captures our vision. The attention to detail and creative excellence is outstanding!"
+                </p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">JD</div>
+                    <div>
+                        <h4>John Davidson</h4>
+                        <p>CEO, Tech Ventures</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">
+                    "Working with this designer was a game-changer for our startup. They transformed our ideas into a stunning product that our users absolutely love."
+                </p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">SM</div>
+                    <div>
+                        <h4>Sarah Miller</h4>
+                        <p>Founder, Design Labs</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">
+                    "Incredible professionalism and creativity. The website they designed has significantly increased our conversion rates and user engagement."
+                </p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">MP</div>
+                    <div>
+                        <h4>Mark Peterson</h4>
+                        <p>Marketing Director, E-Sync</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="carousel-controls">
+            <button class="carousel-btn prev">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="carousel-btn next">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="section-header">
+            <h2 class="section-title">Let's Create Together</h2>
+            <p class="section-subtitle">Get in touch for your next project</p>
+        </div>
+
+        <div class="contact-content">
+            <div class="contact-form">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Project Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Tell me about your project..." rows="6" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+
+            <div class="contact-info">
+                <div class="info-item">
+                    <div class="info-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div>
+                        <h4>Email</h4>
+                        <p>hello@flextechnologies.com</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div>
+                        <h4>Phone</h4>
+                        <p>+254 729986188</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div>
+                        <h4>Location</h4>
+                        <p>Narirobi, Kenya</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Flextechnologies</h4>
+                <p>Crafting digital experiences with passion and precision.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow</h4>
+                <div class="social-links">
+                    <a href="#" class="social-icon"><i class="fab fa-dribbble"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-behance"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Flextechnologies. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- AI Chat Assistant -->
+    <div class="chat-widget">
+        <button class="chat-toggle">
+            <i class="fas fa-comments"></i>
+            <span class="chat-badge">1</span>
+        </button>
+        <div class="chat-panel">
+            <div class="chat-header">
+                <h3>Design Assistant</h3>
+                <button class="chat-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                <div class="message bot-message">
+                    <p>Hi! 👋 How can I help you today? Feel free to ask about my services or portfolio.</p>
+                </div>
+            </div>
+            <form class="chat-form" id="chatForm">
+                <input type="text" placeholder="Type your message..." required>
+                <button type="submit">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/api.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/chat.js"></script>
+    <script src="js/booking.js"></script>
+</body>
+</html>
