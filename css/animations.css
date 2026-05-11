@@ -548,3 +548,178 @@ input:focus {
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
+
+/* ===================================
+   RESPONSIVE ANIMATIONS OPTIMIZATION
+   =================================== */
+
+/* Reduce animations on mobile for better performance */
+@media (max-width: 768px) {
+    /* Reduce animation duration on tablets and smaller */
+    [data-aos] {
+        animation-duration: 0.6s !important;
+    }
+
+    [data-aos-delay="100"] {
+        animation-delay: 0.05s !important;
+    }
+
+    [data-aos-delay="200"] {
+        animation-delay: 0.1s !important;
+    }
+
+    /* Reduce scroll animations */
+    .scroll-reveal {
+        transition: opacity 0.4s ease-out, transform 0.4s ease-out !important;
+    }
+
+    /* Disable certain heavy animations on mobile */
+    .gradient-text {
+        animation: gradientFlow 5s linear infinite;
+    }
+
+    /* Reduce particle animations */
+    @keyframes particleFloat {
+        0% {
+            transform: translateY(0px) translateX(0px);
+            opacity: 0;
+        }
+        10% {
+            opacity: 0.7;
+        }
+        90% {
+            opacity: 0.7;
+        }
+        100% {
+            transform: translateY(-50vh) translateX(50px);
+            opacity: 0;
+        }
+    }
+
+    /* Smoother button hover effects on touch devices */
+    .btn {
+        transition: all 0.2s ease-out;
+    }
+
+    /* Reduce glow effects for better battery life on mobile */
+    .btn-primary:hover {
+        box-shadow: 0 0 15px rgba(0, 119, 255, 0.4) !important;
+    }
+
+    .chat-toggle:hover {
+        transform: scale(1.05) !important;
+    }
+}
+
+/* Even more aggressive optimization for small mobile devices */
+@media (max-width: 480px) {
+    /* Disable complex animations on very small screens */
+    * {
+        animation-duration: 0.3s !important;
+    }
+
+    [data-aos] {
+        animation-duration: 0.4s !important;
+    }
+
+    /* Simplify scroll reveals */
+    .scroll-reveal {
+        transition: opacity 0.3s ease-out !important;
+        transform: none !important;
+    }
+
+    .scroll-reveal.active {
+        opacity: 1;
+        transform: none !important;
+    }
+
+    /* Reduce glow intensity */
+    [data-glow] {
+        box-shadow: none !important;
+    }
+
+    /* Disable hover animations on touch screens */
+    @media (hover: none) {
+        .btn-primary:hover,
+        .btn-secondary:hover,
+        .btn:hover {
+            transform: none !important;
+            box-shadow: initial !important;
+        }
+
+        .chat-toggle:hover {
+            transform: none !important;
+        }
+    }
+
+    /* Optimize card animations */
+    .portfolio-item,
+    .service-card,
+    .testimonial-card {
+        transition: none !important;
+    }
+
+    /* Reduce gradient animations */
+    .gradient-text {
+        animation: none !important;
+        background: #0077FF !important;
+    }
+
+    /* Simplify modal animations */
+    @keyframes modalSlideIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Disable particle effects on small screens */
+    .particles {
+        display: none;
+    }
+
+    /* Simplify floating animations */
+    .floating-cards {
+        animation: none !important;
+    }
+}
+
+/* Performance optimization: Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    /* Disable all animations completely */
+    .scroll-reveal {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+
+    [data-aos] {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
+
+    .page-transition {
+        animation: none !important;
+    }
+
+    /* Keep layouts but disable animations */
+    @keyframes particleFloat {
+        to {
+            opacity: 0;
+        }
+    }
+}
