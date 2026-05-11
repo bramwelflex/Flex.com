@@ -108,9 +108,7 @@ class PortfolioAPI {
 }
 
 // Initialize API instance
-const api = new PortfolioAPI(
-    process.env.API_URL || 'http://localhost:5000/api'
-);
+const api = new PortfolioAPI('http://localhost:5000/api');
 
 // Export for use in other scripts
 if (typeof module !== 'undefined' && module.exports) {
