@@ -3,6 +3,7 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
+const { connectDatabase, isConnected } = require('./config/database');
 
 // Import routes
 const bookingRoutes = require('./routes/bookingRoutes');
@@ -27,7 +28,11 @@ app.use(express.static('.'));
 
 // Health check endpoint
 app.get('/api/health', (req, res) => {
-    res.json({ status: 'Backend is running!', timestamp: new Date() });
+    res.json({ 
+        status: 'Backend is running!', 
+        timestamp: new Date(),
+        database: isConnected() ? 'Connected' : 'Disconnected'
+    });
 });
 
 // Routes
@@ -38,12 +43,7 @@ app.use('/api/payments', paymentRoutes);
 app.use('/api/auth', authRoutes);
 
 // Database connection
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/designer-portfolio', {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-})
-.then(() => console.log('✅ MongoDB connected'))
-.catch(err => console.error('❌ MongoDB connection error:', err));
+connectDatabase();
 
 // Error handling middleware
 app.use((err, req, res, next) => {

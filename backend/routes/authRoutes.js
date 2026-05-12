@@ -47,6 +47,16 @@ router.post('/login', async (req, res) => {
             return res.status(400).json({ error: 'Email and password required' });
         }
 
+        // Check database connection
+        if (require('mongoose').connection.readyState !== 1) {
+            console.warn('⚠️  Database not connected - login unavailable');
+            return res.status(503).json({ 
+                error: 'Authentication service temporarily unavailable.',
+                message: 'Please try again later.',
+                status: 'service_unavailable'
+            });
+        }
+
         const user = await User.findOne({ email });
         if (!user) {
             return res.status(401).json({ error: 'Invalid credentials' });

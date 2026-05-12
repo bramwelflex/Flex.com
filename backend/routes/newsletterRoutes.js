@@ -12,6 +12,16 @@ router.post('/subscribe', async (req, res) => {
             return res.status(400).json({ error: 'Email is required' });
         }
 
+        // Check database connection
+        if (require('mongoose').connection.readyState !== 1) {
+            console.warn('⚠️  Database not connected - subscription queued');
+            return res.status(503).json({ 
+                error: 'Database temporarily unavailable. Please try again later.',
+                message: 'Your subscription will be processed when connection is restored.',
+                status: 'queued'
+            });
+        }
+
         // Check if already subscribed
         let subscriber = await Newsletter.findOne({ email });
 

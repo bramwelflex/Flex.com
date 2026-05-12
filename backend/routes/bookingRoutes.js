@@ -13,6 +13,16 @@ router.post('/', async (req, res) => {
             return res.status(400).json({ error: 'Missing required fields' });
         }
 
+        // Check database connection
+        if (require('mongoose').connection.readyState !== 1) {
+            console.warn('⚠️  Database not connected - booking saved locally only');
+            return res.status(503).json({ 
+                error: 'Database temporarily unavailable. Please try again later.',
+                message: 'Your booking will be queued and processed when connection is restored.',
+                status: 'queued'
+            });
+        }
+
         // Create booking
         const booking = new Booking({
             name,

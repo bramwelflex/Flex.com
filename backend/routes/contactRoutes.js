@@ -13,6 +13,16 @@ router.post('/', async (req, res) => {
             return res.status(400).json({ error: 'Missing required fields' });
         }
 
+        // Check database connection
+        if (require('mongoose').connection.readyState !== 1) {
+            console.warn('⚠️  Database not connected - contact saved locally only');
+            return res.status(503).json({ 
+                error: 'Database temporarily unavailable. Please try again later.',
+                message: 'Your message will be queued and processed when connection is restored.',
+                status: 'queued'
+            });
+        }
+
         // Create contact record
         const contact = new Contact({
             name,
